@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
-    new_list = my_list[:]
-    if 0 <= idx < len(new_list):
-        new_list[idx] = element
-        return (new_list)
-    return (my_list)
+    cp = []
+    for i in range(len(my_list)):
+        cp.append(my_list[i])
+    if idx < 0:
+        return cp
+    elif idx >= len(my_list):
+        return cp
+    else:
+        cp[idx] = element
+        return cp

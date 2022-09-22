@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    def s_r_elm(elm):
-        return (elm if elm != search else replace)
-    return list(map(s_r_elm, my_list))
+    new_1 = []
+    for x in my_list:
+        if x == search:
+            new_1.append(replace)
+        else:
+            new_1.append(x)
+    return new_1
